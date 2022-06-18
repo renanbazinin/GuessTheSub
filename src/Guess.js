@@ -6,6 +6,7 @@ import axios from 'axios'
 
 export default function Guess() {
 
+    const [NSFW,setNSFW] = useState(false)
     const [copyToc,setCopyToc] = useState(false)
     const [randOrder,setRandOrder] =useState(0)
     const [subChose, setSubChose] = useState(null);
@@ -34,12 +35,23 @@ export default function Guess() {
         const raw = await axios.get(`https://www.reddit.com/subreddits/popular.json?limit=5000`)
         const length =raw.data.data.children.length
   
-        const subRan = (raw.data.data.children[Math.floor(Math.random() * length)].data.display_name_prefixed)
+        let subRan = (raw.data.data.children[Math.floor(Math.random() * length)].data.display_name_prefixed)
         await setSubChose(subRan)
 
         
-        const rawFromSub = await axios.get(`https://www.reddit.com/${subRan}/top.json?limit=10&t=week`)
-        const indexRnd =Math.floor(Math.random() * 10)
+        let rawFromSub = await axios.get(`https://www.reddit.com/${subRan}/top.json?limit=10&t=week`)
+        let indexRnd =Math.floor(Math.random() * 10)
+        let count=0;
+        console.log("Found NSFW: " + rawFromSub.data.data.children[indexRnd].data.over_18)
+        while(rawFromSub.data.data.children[indexRnd].data.over_18 && count < 10 && !NSFW)
+        {
+          console.log("Found NSFW")
+             subRan = (raw.data.data.children[Math.floor(Math.random() * length)].data.display_name_prefixed)
+             await setSubChose(subRan)
+             rawFromSub = await axios.get(`https://www.reddit.com/${subRan}/top.json?limit=10&t=week`)
+            indexRnd =Math.floor(Math.random() * 10)
+            count++;
+        }
 
         console.table(((rawFromSub.data.data.children[indexRnd])))
         await setData(rawFromSub.data.data.children[indexRnd])
@@ -83,6 +95,12 @@ const shereURL =async ()=>{
 
 }
 
+    const changNSFW = async (e)=>{
+          setNSFW(e.target.checked)
+
+
+    }
+
   return (
 
 
@@ -97,6 +115,7 @@ const shereURL =async ()=>{
         <button onClick={pullReddit} style={{"width":"60%","alignSelf":"center"}}>Random</button>
         <br/>
         GuessTheSub<br/>
+        <br/><span style={{"textAlign":"center"}}>Enable NSFW? <input type={"checkbox"} onChange={(e)=>{changNSFW(e)}} /></span>
         {!score.waiting?subChose:""}
         <br/><br/><br/>
         <h4 style={{"textAlign":"left","marginLeft":"10%"}}>R/ {!score.waiting? <span>{subChose.substring(2)}<br/>
