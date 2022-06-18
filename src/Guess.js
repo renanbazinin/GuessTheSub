@@ -88,11 +88,11 @@ const shereURL =async ()=>{
 
     <div style={{"display":"flex" , "flexDirection":"column","justifyContent":"center","width": "100%"}}>
         {!score.waiting&&score.correct?<h1 style={{"color":"green"}}>WOW! +1 for you dude!</h1>:!score.waiting?<h1 style={{"color":"red"}}>Wrong! You need to know more reddit</h1>:""} 
-        {!score.waiting?<span>The correct ans is {subChose} <br/> <a href={`https://reddit.com${lastPostLink}`}  target="_blank" rel="noopener noreferrer" >Here is the link to the post</a></span>:""}
+        {!score.waiting?<span style={{"fontSize":"18px"}}>The correct ans is <strong>{subChose}</strong> <br/> <a href={`https://reddit.com${lastPostLink}`}  target="_blank" rel="noopener noreferrer" >Here is the link to the post</a></span>:""}
 
         <h2>Score : {score.score} 
         </h2><br/>
-        <button style={{"width":"22%","alignSelf":"center"}} onClick={shereURL}>Shere Site<img src='https://cdn-icons-png.flaticon.com/512/929/929468.png' width={"20px"}></img></button> 
+        <button style={{"width":"22%","alignSelf":"center","marginBottom":"4px"}} onClick={shereURL}>Shere<img src='https://cdn-icons-png.flaticon.com/512/929/929468.png' width={"20px"}></img></button> 
         {copyToc?<h5>Copy To Clipboard</h5>:""}
         <button onClick={pullReddit} style={{"width":"60%","alignSelf":"center"}}>Random</button>
         <br/>
