@@ -1,6 +1,6 @@
 {
   "name": "my-app",
-  "homepage":  "https://renanbazinin.github.io/guessthesub",
+  "homepage":  "https://renanbazinin.github.io/GuessTheSub",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

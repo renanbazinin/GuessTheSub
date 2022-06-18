@@ -75,9 +75,9 @@ const shereURL =async ()=>{
 
   navigator.clipboard.writeText("hey")
   await setCopyToc(true)
-  // Displaying in the console
 
-  await new Promise(resolve => setTimeout(resolve, 1000));;
+
+  await new Promise(resolve => setTimeout(resolve, 800));;
   await setCopyToc(false)
 
 
