@@ -99,7 +99,9 @@ const shereURL =async ()=>{
         GuessTheSub<br/>
         {!score.waiting?subChose:""}
         <br/><br/><br/>
-        <h4 style={{"textAlign":"left","marginLeft":"10%"}}>R/ {!score.waiting? subChose.substring(2):""}</h4>
+        <h4 style={{"textAlign":"left","marginLeft":"10%"}}>R/ {!score.waiting? <span>{subChose.substring(2)}<br/>
+        <a href={`https://reddit.com${lastPostLink}`}  target="_blank" rel="noopener noreferrer" >Here is the link to the post</a></span>:""}
+    </h4>
         {data!==null?
       
         <div style={{"marginLeft":"10%", "marginRight":"10%","borderStyle":"solid","backgroundColor":"#1A1A1B"}}>
