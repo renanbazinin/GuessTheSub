@@ -103,6 +103,7 @@ const shereURL =async ()=>{
         {data!==null?
       
         <div style={{"marginLeft":"10%", "marginRight":"10%","borderStyle":"solid","backgroundColor":"#1A1A1B"}}>
+
         <h3>{data.data.title}</h3>
         <br/>
 
@@ -123,7 +124,7 @@ const shereURL =async ()=>{
                
 
         </div>:
-        "Finding you something funny"}
+        <div style={{"marginLeft":"10%", "marginRight":"10%","borderStyle":"solid","backgroundColor":"#1A1A1B"}}> Finding you something funny </div>}
       <br/>
       {subsRND!==null&&score.waiting?<div>
         {randOrder===0?<div>
