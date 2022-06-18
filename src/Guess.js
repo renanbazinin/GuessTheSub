@@ -91,8 +91,8 @@ const shereURL =async ()=>{
         {!score.waiting?<span>The correct ans is {subChose} <br/> <a href={`https://reddit.com${lastPostLink}`}  target="_blank" rel="noopener noreferrer" >Here is the link to the post</a></span>:""}
 
         <h2>Score : {score.score} 
-        <br/>
-        <button style={{"width":"10%"}} onClick={shereURL}>Shere Site<img src='https://cdn-icons-png.flaticon.com/512/929/929468.png' width={"20px"}></img></button></h2> 
+        </h2><br/>
+        <button style={{"width":"10%","alignSelf":"center"}} onClick={shereURL}>Shere Site<img src='https://cdn-icons-png.flaticon.com/512/929/929468.png' width={"20px"}></img></button> 
         {copyToc?<h5>Copy To Clipboard</h5>:""}
         <button onClick={pullReddit} style={{"width":"60%","alignSelf":"center"}}>Random</button>
         <br/>
