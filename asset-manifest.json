@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/guessthesub/static/css/main.a530bb9e.css",
+    "main.js": "/guessthesub/static/js/main.bb2eab15.js",
+    "static/js/787.28cb0dcd.chunk.js": "/guessthesub/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/guessthesub/index.html",
+    "main.a530bb9e.css.map": "/guessthesub/static/css/main.a530bb9e.css.map",
+    "main.bb2eab15.js.map": "/guessthesub/static/js/main.bb2eab15.js.map",
+    "787.28cb0dcd.chunk.js.map": "/guessthesub/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a530bb9e.css",
+    "static/js/main.bb2eab15.js"
+  ]
+}
