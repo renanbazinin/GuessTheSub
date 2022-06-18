@@ -73,7 +73,7 @@ export default function Guess() {
       }, []);
 const shereURL =async ()=>{
 
-  navigator.clipboard.writeText("hey")
+  navigator.clipboard.writeText("https://renanbazinin.github.io/GuessTheSub/")
   await setCopyToc(true)
 
 
