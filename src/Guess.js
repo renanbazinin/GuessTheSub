@@ -127,7 +127,7 @@ const shereURL =async ()=>{
         {randOrder===0?<div>
           <button onClick={(e)=>playerGuessed(e)}>{subChose}</button><br/>
           <button onClick={(e)=>playerGuessed(e)}>{subsRND[0]}</button><br/>
-          <button onClick={(e)=>playerGuessed(e)}>{subsRND[1]}</button>
+          <button onClick={(e)=>playerGuessed(e)}>{subsRND[1]}</button><br/>
           <button onClick={(e)=>playerGuessed(e)}>{subsRND[2]}</button>
           </div>:
         
