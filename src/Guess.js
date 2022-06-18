@@ -99,7 +99,9 @@ const shereURL =async ()=>{
         GuessTheSub<br/>
         {!score.waiting?subChose:""}
         <br/><br/><br/>
+        <h4 style={{"textAlign":"left","marginLeft":"10%"}}>R/ {!score.waiting? data.data.subreddit:""}</h4>
         {data!==null?
+      
         <div style={{"marginLeft":"10%", "marginRight":"10%","borderStyle":"solid","backgroundColor":"#1A1A1B"}}>
         <h3>{data.data.title}</h3>
         <br/>
