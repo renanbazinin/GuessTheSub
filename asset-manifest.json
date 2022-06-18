@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/GuessTheSub/static/css/main.95c5c11c.css",
-    "main.js": "/GuessTheSub/static/js/main.48214ba0.js",
+    "main.js": "/GuessTheSub/static/js/main.a9efeddd.js",
     "static/js/787.28cb0dcd.chunk.js": "/GuessTheSub/static/js/787.28cb0dcd.chunk.js",
     "index.html": "/GuessTheSub/index.html",
     "main.95c5c11c.css.map": "/GuessTheSub/static/css/main.95c5c11c.css.map",
-    "main.48214ba0.js.map": "/GuessTheSub/static/js/main.48214ba0.js.map",
+    "main.a9efeddd.js.map": "/GuessTheSub/static/js/main.a9efeddd.js.map",
     "787.28cb0dcd.chunk.js.map": "/GuessTheSub/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.95c5c11c.css",
-    "static/js/main.48214ba0.js"
+    "static/js/main.a9efeddd.js"
   ]
 }
